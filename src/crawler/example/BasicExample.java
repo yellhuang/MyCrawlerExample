@@ -10,7 +10,7 @@ import org.apache.commons.logging.impl.SimpleLog;
  *
  */
 public class BasicExample {
-	// commit test (yellow )
+	// commit test (yell )
 	public static void main(String[] args) {
 
 		// set to debug level
