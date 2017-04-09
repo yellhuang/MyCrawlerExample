@@ -25,9 +25,9 @@ public class FacebookExample {
 		// [query sample]
 		// search?fields=name,id,likes,talking_about_count&limit=1000&q=靠北&type=page
 		String uri = 
-				"https://graph.facebook.com/v2.5"
-				+ "/search?q=%E9%9D%A0%E5%8C%97&type=page&limit=1000&fields=name,id,likes,talking_about_count"
-				+ "&access_token=EAACEdEose0cBAMzLyMlMxZAY73J1TBiZAHJhrF8du8fLhMmGYrUA3W9ezJDQk9oZAa07o4F2drZAL2k1cCtgdpl5LZClZCo6733A3xddNbjSAoTxEZBWY4rKnzLWTU3I0KMgT0qsw6eIRfdzg9RZCIkuTZCtGZCyzct657fywQpsFCNAZDZD";
+				"https://graph.facebook.com/v2.8"
+				+ "/search?q=%E9%A4%90%E5%BB%B3&type=page&limit=1000&fields=name,id,fan_count,talking_about_count"
+				+ "&access_token=EAABr2StPNWABAJw70G5NHGvrfHSIAOMqvvZCKtzwsXfY8S4tVlheLbTsp1OzI3cfENzCxjbjxrkw4NknlZA8G1rliIv7GfZBYHZBNh3QZBPa0tKMKHhePc6gIS6xd39ieB3bZBeZB3t8sGcZCRJl5gLRvkbfgHlOZAZAHRJC8ZBVvaZB8kWp0iv3CwEeXmnEuDu07n8ZD";
 
 
 
@@ -37,10 +37,10 @@ public class FacebookExample {
 //		{
 //			"data": [
 //			{
-//				"name": "靠北工程師",
-//					"id": "1632027893700148",
-//					"likes": 174587,
-//					"talking_about_count": 188119
+//				"name": "FEED ME美式餐廳-嘉義店",
+//		        "id": "176276922442033",
+//				"fan_count": 2910,
+//				"talking_about_count": 3
 //			}
 //		}
 		Elements elems =
@@ -54,7 +54,7 @@ public class FacebookExample {
 		for( Element data: elems ){
 			String id = data.select("id").text();
 			String name = data.select("name").text();
-			String likes = data.select("likes").text();
+			String likes = data.select("fan_count").text();
 			String talking_about_count = data.select("talking_about_count").text();
 			
 			output += id+",\""+name+"\","+likes+","+talking_about_count+"\n";
