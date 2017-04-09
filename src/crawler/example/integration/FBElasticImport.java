@@ -10,11 +10,11 @@ import org.jsoup.select.Elements;
  */
 public class FBElasticImport {
 
-    static String elasticHost = "localhost" ;
+    static String elasticHost = "192.168.152.176" ;
     static String elasticPort = "9200" ;
     static String elasticIndex = "fb";
     static String elasticIndexType = "data";
-    static String pageName = "TechOrange";
+    static String pageName = "AppleEnews";
     static long start = 1491696000;
     static int days = 30;
 
